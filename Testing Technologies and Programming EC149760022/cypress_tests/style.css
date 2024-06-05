@@ -46,7 +46,7 @@ body {
     background-color: transparent;
     border: none;
     top: 10px;
-    text-align: right; /* Align history text to the right */
+    text-align: right;
 }
 
 .calculator-display {
@@ -60,7 +60,7 @@ body {
     border: none;
     border-bottom: 1px solid;
     top: 40px;
-    text-align: right; /* Align display text to the right */
+    text-align: right;
 }
 
 .memory-toggle {
