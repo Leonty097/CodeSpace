@@ -16,9 +16,8 @@ function showFullSizeImage(imageSrc) {
     document.getElementById('fullSizeImg').src = imageSrc;
 }
 
-//Checkout --Causing several issues with cypress testing
-
-/*document.getElementById('checkoutForm').addEventListener('submit', function(event) {
+//Checkout
+document.getElementById('checkoutForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
     const formData = new FormData(this);
@@ -41,4 +40,4 @@ function showFullSizeImage(imageSrc) {
         alert('There was a problem processing your payment. Please try again.');
     });
 });
-*/
+

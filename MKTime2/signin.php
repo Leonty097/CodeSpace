@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 $conn->close();
 ?>
-<?php include 'includes/header.php'; ?>
+    <?php include 'includes/header.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -47,22 +47,23 @@ $conn->close();
 
 <div class="flex-wrapper">
     <!-- keep it blank while processing else show the form to verify user credentials -->
-    <?php if ($_SERVER['REQUEST_METHOD'] !== 'POST' || $error): ?>
+    
+       <?php if ($_SERVER['REQUEST_METHOD'] !== 'POST' || $error): ?>
     <div class="container">
         <h2 class="mt-5">Sign In</h2>
         <?php if ($error): ?>
-            <div class="alert alert-danger" data-cy="alert-error"><?php echo $error; ?></div>
+            <div class="alert alert-danger"><?php echo $error; ?></div>
         <?php endif; ?>
-        <form action="signin.php" method="post" data-cy="signin-form">
+        <form action="signin.php" method="post">
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required data-cy="email-input">
+                <input type="email" class="form-control" id="email" name="email" required>
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="password" required data-cy="password-input">
+                <input type="password" class="form-control" id="password" name="password" required>
             </div>
-            <button type="submit" class="btn btn-primary" data-cy="signin-button">Sign In</button>
+            <button type="submit" class="btn btn-primary">Sign In</button>
         </form>
     </div>
     <?php else: ?>
@@ -87,13 +88,13 @@ $conn->close();
         </div>
     </div>
 </div>
-<?php include 'includes/footer.php'; ?>
+    <?php include 'includes/footer.php'; ?>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    function redirectToHome() {
-        window.location.href = 'index.php';
-    }
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function redirectToHome() {
+            window.location.href = 'index.php';
+        }
+    </script>
 </body>
 </html>

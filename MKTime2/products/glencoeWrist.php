@@ -34,7 +34,7 @@
                                 <h5 class="card-text mt-5">Price: £899</h5>
                                 <form action="/MKTime2/add_to_basket.php" method="get">
                                     <input type="hidden" name="product_id" value="2">
-                                    <button type="submit" class="btn btn-primary float-end" data-cy="add-to-basket">Add to basket</button>
+                                    <button type="submit" class="btn btn-primary float-end">Add to basket</button>
                                 </form>
                             </div>
                         </div>

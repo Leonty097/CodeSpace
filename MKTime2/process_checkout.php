@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $stmt2->close();
         }
         $stmt->close();
-
+    
         $stmt = $conn->prepare("INSERT INTO payments (order_id, payment_date, payment_amount, payment_method) VALUES (?, ?, ?, ?)");
         $stmt->bind_param('isds', $order_id, $order_date, $total_amount, $payment_method);
         $stmt->execute();

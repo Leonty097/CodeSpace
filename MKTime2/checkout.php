@@ -35,32 +35,32 @@ $stmt->close();
 
     <h1 class="text-center mt-4">Checkout</h1>
     <?php if (empty($basket)): ?>
-        <p class="text-center" data-cy="empty-basket">Your basket is empty.</p>
+        <p class="text-center">Your basket is empty.</p>
     <?php else: ?>
         <div class="text-end mb-3">
             <h4>Total: £<?php echo number_format($total_amount, 2); ?></h4>
         </div>
         <div class="container" style="padding: 20px;">
-        <form id="checkoutForm" data-cy="checkout-form">
+        <form id="checkoutForm">
             <input type="hidden" name="total_amount" value="<?php echo $total_amount; ?>">
 
             <div class="mb-3">
                 <label for="cardNumber" class="form-label">Card Number</label>
-                <input type="text" class="form-control" id="cardNumber" name="card_number" required data-cy="card-number-input">
+                <input type="text" class="form-control" id="cardNumber" name="card_number" required>
             </div>
             <div class="mb-3">
                 <label for="nameOnCard" class="form-label">Name on Card</label>
-                <input type="text" class="form-control" id="nameOnCard" name="name_on_card" required data-cy="name-on-card-input">
+                <input type="text" class="form-control" id="nameOnCard" name="name_on_card" required>
             </div>
             <div class="mb-3">
                 <label for="expiryDate" class="form-label">Expiry Date</label>
-                <input type="text" class="form-control" id="expiryDate" name="expiry_date" placeholder="MM/YY" required data-cy="expiry-date-input">
+                <input type="text" class="form-control" id="expiryDate" name="expiry_date" placeholder="MM/YY" required>
             </div>
             <div class="mb-3">
                 <label for="cvv" class="form-label">CVV</label>
-                <input type="password" class="form-control" id="cvv" name="cvv" required data-cy="cvv-input">
+                <input type="password" class="form-control" id="cvv" name="cvv" required>
             </div>
-            <button type="submit" class="btn btn-primary" data-cy="pay-now-button">Pay Now</button>
+            <button type="submit" class="btn btn-primary">Pay Now</button>
         </form>
         </div>
     <?php endif; ?>
