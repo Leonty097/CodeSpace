@@ -35,7 +35,7 @@
 
                                 <form action="/MKTime2/add_to_basket.php" method="get">
                                     <input type="hidden" name="product_id" value="3">
-                                    <a href="/MKTime2/add_to_basket.php?product_id=3" class="btn btn-primary float-end">Add to basket</a>
+                                    <a href="/MKTime2/add_to_basket.php?product_id=3" class="btn btn-primary float-end" data-cy="add-to-basket">Add to basket</a>
                                 </form>
                             </div>
                         </div>
