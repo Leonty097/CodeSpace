@@ -59,7 +59,7 @@ $conn->close();
                     <div class="card-body">
                         <h5 class="card-title"><?php echo htmlspecialchars($product['product_name']); ?></h5>
                         <p class="card-text"><?php echo htmlspecialchars($product['product_description']); ?></p>
-                        <a href="products/<?php echo strtolower(str_replace(' ', '', $product['product_name'])); ?>.php" class="btn btn-primary">View Details</a>
+                        <a href="products/<?php echo strtolower(str_replace(' ', '', $product['product_name'])); ?>.php" class="btn btn-primary" data-cy="view-details-<?php echo strtolower(str_replace(' ', '-', $product['product_name'])); ?>">View Details</a>
                     </div>
                 </div>
             </div>
